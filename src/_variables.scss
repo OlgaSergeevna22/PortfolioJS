@@ -1,0 +1,18 @@
+$bg-dark:#000000;
+$gold: #bdae82;
+$white:#fff;
+@mixin small-text ($font-size, $line-height, $color, $font-family: 'Inter', $font-weight: 400) {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+}
+
+@mixin title-text($font-size, $line-height, $color, $font-family: 'Merriweather', $font-weight: 700) {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+}

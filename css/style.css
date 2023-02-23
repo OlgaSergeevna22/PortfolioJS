@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+header .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo-wrapper {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+header li {
+  margin-left: 30px;
+}
+header a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 50px;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+.heir-me {
+  padding: 250px 80px 330px;
+  background-image: url(../images/bg-hire-me.svg);
+  background-size: cover;
+}
+.heir-me .text {
+  width: 330px;
+}
+.heir-me .text h1 {
+  font-size: 60px;
+  line-height: 120px;
+  color: #fff;
+  font-family: "Merriweather";
+  font-weight: 700;
+}
+.heir-me .text p {
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.heir-me .text .hire {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000000;
+  font-family: "Inter";
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 0;
+  width: 220px;
+  height: 55px;
+  background-color: #bdae82;
+}
+.heir-me .text .hire:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.heir-me .mod-window {
+  display: none;
+  margin: auto;
+  width: 300px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 400;
+  border: 2px lawngreen solid;
+  box-shadow: 0 15px 25px rgba(23, 244, 3, 0.69);
+}
+.heir-me .send {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
