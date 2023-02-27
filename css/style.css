@@ -6,7 +6,7 @@
 
 .container {
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -43,11 +43,22 @@ header a {
   font-family: "Inter";
   font-weight: 400;
 }
+header .menu {
+  width: 50px;
+  height: 50px;
+  margin-right: 64px;
+}
+header .burger {
+  display: none;
+  background: transparent;
+  border: none;
+}
 
 .heir-me {
   padding: 250px 80px 330px;
   background-image: url(../images/bg-hire-me.svg);
   background-size: cover;
+  background-position: center;
 }
 .heir-me .text {
   width: 330px;
@@ -75,11 +86,11 @@ header a {
   color: #000000;
   font-family: "Inter";
   font-weight: 400;
-  text-align: center;
-  padding: 8px 0;
   width: 220px;
   height: 55px;
   background-color: #bdae82;
+  text-align: center;
+  padding: 8px 0;
 }
 .heir-me .text .hire:hover {
   color: #fff;
@@ -87,7 +98,7 @@ header a {
 }
 .heir-me .mod-window {
   display: none;
-  margin: auto;
+  margin-top: 10px;
   width: 300px;
   font-size: 20px;
   line-height: 40px;
@@ -99,4 +110,155 @@ header a {
 }
 .heir-me .send {
   cursor: pointer;
+}
+
+.portfolio {
+  background-color: #000000;
+}
+.portfolio .line-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio .line-wrapper .line {
+  margin-top: 40px;
+  width: 350px;
+  color: #bdae82;
+}
+.portfolio h1 {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  font-size: 40px;
+  line-height: 80px;
+  color: #bdae82;
+  font-family: "Merriweather";
+  font-weight: 700;
+  padding: 0 20px;
+}
+.portfolio .seasons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.portfolio .seasons .season {
+  margin-left: 3px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+  font-family: "Inter";
+  font-weight: 400;
+  width: 220px;
+  height: 55px;
+  background-color: #000000;
+  text-align: center;
+  padding: 8px 0;
+  border: 1px #bdae82 solid;
+  cursor: pointer;
+}
+.portfolio .seasons .autumn {
+  background-color: #bdae82;
+  color: #000000;
+}
+.portfolio .photos {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.portfolio .photos .photo {
+  width: 450px;
+  margin-bottom: 25px;
+}
+.portfolio .photos .photo .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.portfolio .photos .photo .modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.portfolio .photos .photo .modal .close:hover,
+.portfolio .photos .photo .modal .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.portfolio .photos .photo .modal .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.portfolio .photos .photo .modal #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.portfolio .photos .photo .modal .modal-content,
+.portfolio .photos .photo .modal #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+@media (max-width: 1480px) {
+  .container {
+    max-width: 95%;
+  }
+}
+@media (max-width: 770px) {
+  header .navigation {
+    display: none;
+  }
+  header .burger {
+    display: block;
+    margin-right: 64px;
+    cursor: pointer;
+  }
+  .heir-me {
+    padding: 168px 60px 266px;
+  }
+  .heir-me .text p {
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  .heir-me .text h1 {
+    font-size: 32px;
+    line-height: 64px;
+    color: #fff;
+    font-family: "Merriweather";
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=style.css.map */

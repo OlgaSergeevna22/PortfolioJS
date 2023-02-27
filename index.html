@@ -17,14 +17,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">en/ru</a></li>
+                    <li><a class="navigation" href="#">Skills</a></li>
+                    <li><a class="navigation" href="#">Portfolio</a></li>
+                    <li><a class="navigation" href="#">Video</a></li>
+                    <li><a class="navigation" href="#">Price</a></li>
+                    <li><a class="navigation" href="#">Contacts</a></li>
+                    <li><a class="language" href="#">en/ru</a></li>
                 </ul>
             </nav>
+            <div class="menu">
+                <button class="burger"><img src="/images/hamburger_unvisited.svg" alt="burger"></button>
+            </div>
         </div>
     </header>
     <main>
@@ -46,10 +49,74 @@
                 </div>
 
             </section>
+            <section class="portfolio">
+                <div class="line-wrapper">
+                    <hr class="line">
+                    <h1>Portfolio</h1>
+                    <hr class="line">
+                </div>
+
+                <div class="seasons">
+                    <button class="winter season">Winter</button>
+                    <button class="spring season">Spring</button>
+                    <button class="summer season">Summer</button>
+                    <button class="autumn season">Autumn</button>
+                </div>
+                <div class="photos">
+                    <div class="photo">
+                        <img id="photo1" src="./images/portfolio1.svg" alt="photo">
+                        <div id="modal1" class="modal">
+                            <span class="close close1">&times;</span>
+                            <img class="modal-content" id="one">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img id="photo2" src="./images/portfolio2.png" alt="photo">
+                        <div id="modal2" class="modal">
+                            <span class="close close2">&times;</span>
+                            <img class="modal-content" id="two">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img id="photo3" src="./images/portfolio3.png" alt="photo">
+                        <div id="modal3" class="modal">
+                            <span class="close close3">&times;</span>
+                            <img class="modal-content" id="three">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img id="photo4" src="./images/portfolio4.png" alt="photo">
+                        <div id="modal4" class="modal">
+                            <span class="close close4">&times;</span>
+                            <img class="modal-content" id="four">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img id="photo5" src="./images/portfolio5.png" alt="photo">
+                        <div id="modal5" class="modal">
+                            <span class="close close5">&times;</span>
+                            <img class="modal-content" id="five">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img id="photo6" src="./images/portfolio6.png" alt="photo">
+                        <div id="modal6" class="modal">
+                            <span class="close close6">&times;</span>
+                            <img class="modal-content" id="six">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     </main>
-    <script src="index.js"></script>
+    <script src="index.js "></script>
 </body>
 
 </html>

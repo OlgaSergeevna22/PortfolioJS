@@ -1,83 +1,230 @@
-@import 'variables.scss';
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-.container {
-    max-width: 1440px;
-    margin: auto;
-}
-
-header {
-    position: absolute;
-    z-index: 1;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    .flex-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo-wrapper {
-        width: 50px;
-        height: 50px;
-        margin: 20px;
-    }
-    ul {
-        display: flex;
-        list-style: none;
-        margin-right: 20px;
-    }
-    li {
-        margin-left: 30px;
-    }
-    a {
-        display: block;
-        text-decoration: none;
-        @include small-text(20px, 50px, $white)
-    }
-}
-
-.heir-me {
-    padding: 250px 80px 330px;
-    background-image: url(../images/bg-hire-me.svg);
-    background-size: cover;
-    .text {
-        width: 330px;
-        h1 {
-            @include title-text(60px, 120px, $white);
-        }
-        p {
-            @include small-text(20px, 40px, $white);
-            margin-top: 10px;
-            margin-bottom: 25px;
-        }
-        .hire {
-            display: block;
-            @include small-text(20px, 40px, $bg-dark);
-            text-align: center;
-            padding: 8px 0;
-            width: 220px;
-            height: 55px;
-            background-color: $gold;
-        }
-        .hire:hover {
-            color: $white;
-            cursor: pointer;
-        }
-    }
-    .mod-window {
-        display: none;
-        margin: auto;
-        width: 300px;
-        @include small-text(20px, 40px, $white);
-        border: 2px lawngreen solid;
-        box-shadow: 0 15px 25px rgba(23, 244, 3, 0.69);
-    }
-    .send {
-        cursor: pointer;
-    }
-}
+                @import 'variables.scss';
+                * {
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                }
+                
+                .container {
+                    max-width: 1440px;
+                    margin: 0 auto;
+                }
+                
+                header {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0px;
+                    right: 0px;
+                    left: 0px;
+                    .flex-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .logo-wrapper {
+                        width: 50px;
+                        height: 50px;
+                        margin: 20px;
+                    }
+                    ul {
+                        display: flex;
+                        list-style: none;
+                        margin-right: 20px;
+                    }
+                    li {
+                        margin-left: 30px;
+                    }
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        @include small-text(20px, 50px, $white)
+                    }
+                    .menu {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 64px;
+                    }
+                    .burger {
+                        display: none;
+                        background: transparent;
+                        border: none;
+                    }
+                }
+                
+                .heir-me {
+                    padding: 250px 80px 330px;
+                    background-image: url(../images/bg-hire-me.svg);
+                    background-size: cover;
+                    background-position: center;
+                    .text {
+                        width: 330px;
+                        h1 {
+                            @include title-text(60px, 120px, $white);
+                        }
+                        p {
+                            @include small-text(20px, 40px, $white);
+                            margin-top: 10px;
+                            margin-bottom: 25px;
+                        }
+                        .hire {
+                            display: block;
+                            @include small-text(20px, 40px, $bg-dark);
+                            @include button($gold);
+                        }
+                        .hire:hover {
+                            color: $white;
+                            cursor: pointer;
+                        }
+                    }
+                    .mod-window {
+                        display: none;
+                        margin-top: 10px;
+                        width: 300px;
+                        @include small-text(20px, 40px, $white);
+                        border: 2px lawngreen solid;
+                        box-shadow: 0 15px 25px rgba(23, 244, 3, 0.69);
+                    }
+                    .send {
+                        cursor: pointer;
+                    }
+                }
+                
+                .portfolio {
+                    background-color: $bg-dark;
+                    .line-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .line {
+                            margin-top: 40px;
+                            width: 350px;
+                            color: $gold;
+                        }
+                    }
+                    h1 {
+                        margin-top: 100px;
+                        margin-bottom: 60px;
+                        @include title-text(40px, 80px, $gold);
+                        padding: 0 20px;
+                    }
+                    .seasons {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        .season {
+                            margin-left: 3px;
+                            @include small-text(20px, 40px, $gold);
+                            @include button($bg-dark);
+                            border: 1px $gold solid;
+                            cursor: pointer;
+                        }
+                        .autumn {
+                            background-color: $gold;
+                            color: $bg-dark;
+                        }
+                    }
+                    .photos {
+                        margin-top: 60px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        .photo {
+                            width: 450px;
+                            margin-bottom: 25px;
+                            .modal {
+                                display: none;
+                                position: fixed;
+                                z-index: 1;
+                                padding-top: 100px;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                overflow: auto;
+                                background-color: $bg-dark;
+                                background-color: rgba($bg-dark, 0.9);
+                                .close {
+                                    position: absolute;
+                                    top: 15px;
+                                    right: 35px;
+                                    color: #f1f1f1;
+                                    font-size: 40px;
+                                    font-weight: bold;
+                                    transition: 0.3s;
+                                }
+                                .close:hover,
+                                .close:focus {
+                                    color: #bbb;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
+                                .modal-content {
+                                    margin: auto;
+                                    display: block;
+                                    width: 80%;
+                                    max-width: 700px;
+                                }
+                                #caption {
+                                    margin: auto;
+                                    display: block;
+                                    width: 80%;
+                                    max-width: 700px;
+                                    text-align: center;
+                                    color: #ccc;
+                                    padding: 10px 0;
+                                    height: 150px;
+                                }
+                                .modal-content,
+                                #caption {
+                                    animation-name: zoom;
+                                    animation-duration: 0.6s;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                @keyframes zoom {
+                    from {
+                        transform: scale(0);
+                    }
+                    to {
+                        transform: scale(1);
+                    }
+                }
+                
+                @media only screen and (max-width: 700px) {
+                    .modal-content {
+                        width: 100%;
+                    }
+                }
+                
+                @media(max-width:1480px) {
+                    .container {
+                        max-width: 95%;
+                    }
+                }
+                
+                @media(max-width:770px) {
+                    header {
+                        .navigation {
+                            display: none;
+                        }
+                        .burger {
+                            display: block;
+                            margin-right: 64px;
+                            cursor: pointer;
+                        }
+                    }
+                    .heir-me {
+                        padding: 168px 60px 266px;
+                        .text p {
+                            line-height: 24px;
+                            margin-top: 20px;
+                            margin-bottom: 60px;
+                        }
+                        .text h1 {
+                            @include title-text(32px, 64px, $white, $font-weight: 400)
+                        }
+                    }
+                }

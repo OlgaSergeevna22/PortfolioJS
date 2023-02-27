@@ -16,3 +16,11 @@ $white:#fff;
     font-family: $font-family;
     font-weight: $font-weight;
 }
+
+@mixin button($background-color, $width:220px, $height:55px, $text-align: center, $padding: 8px 0) {
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    text-align: $text-align;
+    padding: $padding;
+}
